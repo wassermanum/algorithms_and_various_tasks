@@ -11,11 +11,12 @@ public class Main {
 //        System.out.println("Hello world!");
 //        System.out.println(dontGiveMeFive(3, 8));
 
-        char[] chars = {'a', 'b', 'd'};
-        System.out.println(Character.codePointAt(chars, 0));
-        System.out.println(Character.codePointAt(chars, 1));
-        System.out.println(Character.codePointAt(chars, 2));
-        System.out.println((char) ('a' + 1));
-        System.out.println('d' - 'a');
+//        char[] chars = {'a', 'b', 'd'};
+//        System.out.println(Character.codePointAt(chars, 0));
+//        System.out.println(Character.codePointAt(chars, 1));
+//        System.out.println(Character.codePointAt(chars, 2));
+//        System.out.println((char) ('a' + 1));
+//        System.out.println('d' - 'a');
+        System.out.println(3 % 2);
     }
 }
