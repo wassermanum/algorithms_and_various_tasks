@@ -160,9 +160,7 @@ public class Codewars {
         int[][] result = new int[matrix.length - 1][matrix.length - 1];
         for (int i = 0; i < matrix.length - 1; i++) {
             for (int j = 0; j < matrix.length - 1; j++) {
-                if (i != row) {
-                    result[i][j] = matrix[i + 1][j];
-                }
+                result[i][j] = j < row ? matrix[i + 1][j] : matrix[i + 1][j + 1];
             }
         }
         return result;
@@ -175,15 +173,19 @@ public class Codewars {
 
             int result = 0;
             if (matrix.length > 2) {
-//                for (int i = matrix.length - 1; i >= 0; i--) {
                 for (int i = 0; i < matrix.length; i++) {
                     result =
                             i % 2 == 0
                                     ? result + (determinant(getMinor(matrix, i)) * matrix[0][i])
                                     : result - (determinant(getMinor(matrix, i)) * matrix[0][i]);
                 }
+            } else {
+                result += matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0];
             }
-            result += matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0];
             return result;
     }
+
+//    public String recoverSecret(char[][] triplets) {
+//        int count = (int) Arrays.stream(triplets).distinct().count();
+//    }
 }
